@@ -14,7 +14,7 @@ stages:
     pool:
       vmImage: 'Ubuntu 16.04'
     steps:
-    - script: echo Build!  Build.SourceBranch=${Build.SourceBranch} Build.SourceBranchName=$(Build.SourceBranchName)
+    - script: echo Build!  Build.SourceBranch=$(Build.SourceBranch) Build.SourceBranchName=$(Build.SourceBranchName)
 
 - stage: deploy_east
   dependsOn: build_test
